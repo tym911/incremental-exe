@@ -1,0 +1,539 @@
+<html>
+<head>
+  <style>
+  button{
+    border-style: solid;
+  }
+
+  .upgradeButtons{
+    display: block;
+    height: 40px;
+    width: 250px
+  }
+
+
+  .center{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  #grow{
+    margin-top: 120px;
+    margin-bottom: 270px;
+    background-color: red;
+    font-size: 32px;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 5px;
+    padding: 10px 10px;
+    font-family: "copperplate";
+  }
+  .textcenter{
+    text-align: center;
+  }
+
+  #upgrade1{
+    background-color: grey;
+    border-radius: 5px;
+    border-width: 5px;
+    padding: 7px 7px;
+    font-weight: 900;
+  }
+
+  #upgrade2{
+    background-color: green;
+    border-radius: 5px;
+    border-width: 5px;
+    padding: 7px 7px;
+    font-weight: 900;
+  }
+
+  #upgrade3{
+    background-color: green;
+    border-radius: 5px;
+    border-width: 5px;
+    padding: 7px 7px;
+    font-weight: 900;
+  }
+
+  #upgrade4{
+    background-color: grey;
+    border-radius: 5px;
+    border-width: 5px;
+    padding: 7px 7px;
+    font-weight: 900;
+  }
+
+  #upgrade5{
+    background-color: grey;
+    border-radius: 5px;
+    border-width: 5px;
+    padding: 7px 7px;
+    font-weight: 900;
+  }
+
+  #upgrade6{
+    background-color: green;
+    border-radius: 5px;
+    border-width: 5px;
+    padding: 7px 7px;
+    font-weight: 900;
+  }
+  #upgrade7{
+    background-color: grey;
+    border-radius: 5px;
+    border-width: 5px;
+    padding: 7px 7px;
+    font-weight: 900;
+  }
+  #upgrade8{
+    background-color: green;
+    border-radius: 5px;
+    border-width: 5px;
+    padding: 7px 7px;
+    font-weight: 900;
+  }
+
+
+  .underline{
+    text-decoration: underline;
+  }
+  #UpgradeText{
+    color: green;
+    font-family: Garamond;
+    font-size: 22px;
+    letter-spacing: 5px;
+    font-weight: 900;
+    min-width: 100%;
+    border-top: 12px ridge grey;
+    border-bottom: 12px ridge grey;
+    padding: 10px 0px;
+    margin: 0px;
+
+  }
+  .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+
+  }
+  .upperRow{
+    display: flex;
+    flex-direction: row;
+  }
+
+  #upperCol1, #upperCol3{
+    width: 25%;
+  }
+
+  #upperCol2{
+    width: 50%;
+    border-left: 15px ridge grey;
+    border-right: 15px ridge grey;
+
+  }
+
+  #numberDisplay{
+    font-size: 40px;
+    font-family: Monaco;
+    letter-spacing: 3px;
+  }
+
+  #allupgrades{
+    margin-top: 50px;
+  }
+
+  #building1{
+    background-color: orange;
+    border-radius: 3px;
+    border-width: 3px;
+    padding: 5px 5px;
+    font-weight: 900;
+    margin-top: 45px;
+  }
+
+  #building2{
+    background-color: orange;
+    border-radius: 3px;
+    border-width: 3px;
+    padding: 5px 5px;
+    font-weight: 900;
+    margin-top: 10px;
+  }
+
+  #building3{
+    background-color: orange;
+    border-radius: 3px;
+    border-width: 3px;
+    padding: 5px 5px;
+    font-weight: 900;
+    margin-top: 10px;
+  }
+
+  #building4{
+    background-color: orange;
+    border-radius: 3px;
+    border-width: 3px;
+    padding: 5px 5px;
+    font-weight: 900;
+    margin-top: 10px;
+  }
+
+  #building5{
+    background-color: orange;
+    border-radius: 3px;
+    border-width: 3px;
+    padding: 5px 5px;
+    font-weight: 900;
+    margin-top: 10px;
+  }
+
+  #building6{
+    background-color: orange;
+    border-radius: 3px;
+    border-width: 3px;
+    padding: 5px 5px;
+    font-weight: 900;
+    margin-top: 10px;
+  }
+
+  #building7{
+    background-color: orange;
+    border-radius: 3px;
+    border-width: 3px;
+    padding: 5px 5px;
+    font-weight: 900;
+    margin-top: 10px;
+  }
+
+
+
+  .buildings{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+  }
+
+  #buildingsText{
+    font-family: Monaco;
+    font-size: 30px;
+    margin-top: 20px;
+
+  }
+
+
+  #beyondText{
+    font-family: Impact;
+    font-size: 25px;
+    margin-top: 28px;
+    color: black;
+    letter-spacing: 12px;
+  }
+
+  </style>
+
+</head>
+<header></header>
+<body>
+
+  <div id="upperBody">
+
+    <div class="upperRow upperRow1">
+      <div id="upperCol1" class="upperCol">
+        <p id="buildingsText" class="textcenter">Buildings</p>
+        <button onlick="buyBuilding1()" id="building1" class="buildings">Binary Building | <span id="building1cost">50</span></button>
+        <button onlick="buyBuilding2()" id="building2" class="buildings">Hexadecimal Hut | <span id="building1cost">1000</span></button>
+        <button onlick="buyBuilding3()" id="building3" class="buildings">Intel Infrastructure | <span id="building1cost">150000</span></button>
+        <button onlick="buyBuilding4()" id="building4" class="buildings">C++ Citadel | <span id="building1cost">25000000</span></button>
+        <button onlick="buyBuilding5()" id="building5" class="buildings">Python Palace | <span id="building1cost">50000000000</span></button>
+        <button onlick="buyBuilding6()" id="building6" class="buildings">JavaScript Jail | <span id="building1cost">10000000000000</span></button>
+        <button onlick="buyBuilding7()" id="building7" class="buildings">HTML HoverCraft | <span id="building1cost">900000000000000000</span></button>
+      </div>
+      <div id="upperCol2" class="upperCol">
+        <h1 class="textcenter">Incremental.exe</h1>
+        <p class="textcenter" id="numberdisplay">0</p>
+        <button id="grow" class="center" >Grow</button>
+      </div>
+      <div id="upperCol3" class="upperCol">
+        <p id="beyondText" class="textcenter">Beyond</p>
+      </div>
+    </div>
+  </div>
+
+  <p id="UpgradeText" class="textcenter" >UPGRADES</p>
+  <div id="allupgrades">
+    <div id="row1" class="row">
+      <div id="col1" class="col col1">
+        <button id="upgrade1" class="upgradeButtons">Multiply Base Grow by <span class="underline">2x</span></button>
+      </div>
+      <div id="col2" class="col col2">
+        <button id="upgrade4" class="upgradeButtons">Multiply Base Grow by <span class="underline">3x</span></button>
+      </div>
+      <div id="col3" class="col col3">
+        <button id="upgrade5" class="upgradeButtons">Multiply Base Grow by <span class="underline">5x</span></button>
+      </div>
+      <div id="col4" class="col col4">
+        <button id="upgrade7" class="upgradeButtons">Multiply Base Grow by <span class="underline">12x</span></button>
+      </div>
+    </div>
+    <div id="row2" class="row">
+      <div id="col5" class="col col1">
+        <button id="upgrade2" class="upgradeButtons">Increase Base Grow by <span class="underline">+5</span></button>
+      </div>
+      <div id="col6" class="col col2">
+        <button id="upgrade3" class="upgradeButtons">Increase Base Grow by <span class="underline">+20</span></button>
+      </div>
+      <div id="col7" class="col col3">
+        <button id="upgrade6" class="upgradeButtons">Increase Base Grow by <span class="underline">+100</span></button>
+      </div>
+      <div id="col8" class="col col4">
+        <button id="upgrade8" class="upgradeButtons">Increase Base Grow by <span class="underline">+500</span></button>
+      </div>
+    </div>
+  </div>
+  <script>
+
+    var number = 0;
+    var globalGrowSize = 7;
+    var globalTimeOut = 50;
+    var growInterval = 1;
+    var numberDisplay = document.getElementById("numberdisplay");
+    var growButton = document.getElementById("grow");
+    var upgrade1Display = document.getElementById("upgrade1");
+    var upgrade2Display = document.getElementById("upgrade2");
+    var upgrade3Display = document.getElementById("upgrade3");
+    var upgrade4Display = document.getElementById("upgrade4");
+    var upgrade5Display = document.getElementById("upgrade5");
+    var upgrade6Display = document.getElementById("upgrade6");
+    var upgrade7Display = document.getElementById("upgrade7");
+    var upgrade8Display = document.getElementById("upgrade8");
+    var building1Display = document.getElementById("building1");
+    var building2Display = document.getElementById("building2");
+    var building3Display = document.getElementById("building3");
+    var building4Display = document.getElementById("building4");
+    var building5Display = document.getElementById("building5");
+    var building6Display = document.getElementById("building6");
+    var building7Display = document.getElementById("building7");
+
+
+
+
+    var building1Owned;
+    var building1OwnedDisplay;
+    var building1Cost;
+    var building1CostDisplay = document.getElementById("building1owned");
+
+    var building2Owned;
+    var building2OwnedDisplay;
+    var building2Cost;
+    var building2CostDisplay = document.getElementById("building2owned");
+
+    var building3Owned;
+    var building3OwnedDisplay;
+    var building3Cost;
+    var building3CostDisplay = document.getElementById("building3owned");
+
+    var building4Owned;
+    var building4OwnedDisplay;
+    var building4Cost;
+    var building4CostDisplay = document.getElementById("building4owned");
+
+    var building5Owned;
+    var building5OwnedDisplay;
+    var building5Cost;
+    var building5CostDisplay = document.getElementById("building5owned");
+
+    var building6Owned;
+    var building6OwnedDisplay;
+    var building6Cost;
+    var building6CostDisplay = document.getElementById("building6owned");
+
+    var building7Owned;
+    var building7OwnedDisplay;
+    var building7Cost;
+    var building7CostDisplay = document.getElementById("building7owned");
+
+
+
+    var allBuildingCostInfo = []
+    var allBuildingCostDisplay;
+    var allBuildingOwnedInfo;
+    var allBuildingOwnedDisplay;
+
+    var growOn = false;
+    numberDisplay.textContent = 0;
+
+
+    // function buttonGrower(element, growSize, timeOut){
+    //   if(!growOn){
+    //     var padding = [ parseInt(window.getComputedStyle(element, null).getPropertyValue('padding-left')) , parseInt(window.getComputedStyle(element, null).getPropertyValue('padding-top')) , parseInt(window.getComputedStyle(element, null).getPropertyValue('padding-right')) , parseInt(window.getComputedStyle(element, null).getPropertyValue('padding-bottom'))];
+    //     var margin = [ parseInt(window.getComputedStyle(element, null).getPropertyValue('margin-left')) , parseInt(window.getComputedStyle(element, null).getPropertyValue('margin-top')) , parseInt(window.getComputedStyle(element, null).getPropertyValue('margin-right')) , parseInt(window.getComputedStyle(element, null).getPropertyValue('margin-bottom'))];
+    //     for(let i = 0; i < padding.length; i++){
+    //       element.style.paddingLeft = padding[0] + growSize;
+    //       element.style.paddingTop = padding[1] + growSize;
+    //       element.style.paddingRight = padding[2] + growSize;
+    //       element.style.paddingBottom = padding[3] + growSize;
+    //       element.style.marginLeft = margin[0] - growSize;
+    //       element.style.marginTop = margin[1] - growSize;
+    //       element.style.marginRight = margin[2] - growSize;
+    //       element.style.marginBottom = margin[3] - growSize;
+    //     }
+    //     growOn = true;
+    //     const myTimeout = setTimeout(function(){
+    //         element.style.paddingLeft = padding[0];
+    //         element.style.paddingTop = padding[1];
+    //         element.style.paddingRight = padding[2];
+    //         element.style.paddingBottom = padding[3];
+    //         element.style.marginLeft = margin[0];
+    //         element.style.marginTop = margin[1];
+    //         element.style.marginRight = margin[2];
+    //         element.style.marginBottom = margin[3];
+    //         growOn = false;
+    //      }, timeOut);
+    //    }
+    // }
+
+
+    function numberParser(number26){
+      if(number26 < 1000000000 && number26 >= 1000000){
+        return String(Math.round(number26 / 1000000 * 100) / 100 ) + " Million";
+      } else if(number26 < 1000000000000 && number26 >= 1000000000){
+        return String(Math.round(number26 / 1000000000 * 100) / 100 ) + " Billion";
+      } else if(number26 < 1000000000000000 && number26 >= 1000000000000){
+        return String(Math.round(number26 / 1000000000000 * 100) / 100 ) + " Trillion";
+      } else if(number26 < 1000000000000000000 && number26 >= 1000000000000000){
+        return String(Math.round(number26 / 1000000000000000 * 100) / 100 ) + " Quadrillion";
+      } else if(number26 < 1000000000000000000000 && number26 >= 1000000000000000000){
+        return String(Math.round(number26 / 1000000000000000000 * 100) / 100 ) + " Quintillion";
+      } else if(number26 < 1000000000000000000000000 && number26 >= 1000000000000000000000){
+        return String(Math.round(number26 / 1000000000000000000000 * 100) / 100 ) + " Sextillion";
+      } else if(number26 < 1000000000000000000000000000 && number26 >= 1000000000000000000000000){
+        return String(Math.round(number26 / 1000000000000000000000000 * 100) / 100 ) + " Septillion";
+      } else if(number26 < 1000000000000000000000000000000 && number26 >= 1000000000000000000000000000){
+        return String(Math.round(number26 / 1000000000000000000000000000 * 100) / 100 ) + " Octillion";
+      } else if(number26 < 1000000000000000000000000000000000 && number26 >= 1000000000000000000000000000000){
+        return String(Math.round(number26 / 1000000000000000000000000000000 * 100) / 100 ) + " Nonillion";
+      } else if(number26 < 1000000000000000000000000000000000000 && number26 >= 1000000000000000000000000000000000){
+        return String(Math.round(number26 / 1000000000000000000000000000000000 * 100) / 100 ) + " Decillion";
+      } else {
+        return number26;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function buttonGrower(element, growSize, timeOut){
+      if(!growOn){
+        element.style.transform = "scale(" + String((growSize / 100) + 1) + "," + String((growSize / 100) + 1) + ")";
+        growOn = true;
+        const myTimeout = setTimeout(function(){
+            element.style.transform = "scale(1,1)";
+            growOn = false;
+         }, timeOut);
+       }
+    }
+
+    function addtoNumber(valuePersecond){
+      number = number + valuePersecond
+      document.getElemetId("number");
+
+
+    }
+
+
+
+  growButton.addEventListener("click", function(){
+    number = number + growInterval;
+    numberDisplay.textContent = numberParser(number);
+    buttonGrower(growButton, globalGrowSize, 50);
+   });
+
+
+
+   upgrade1Display.addEventListener("click", function(){
+      buttonGrower(upgrade1Display, globalGrowSize, globalTimeOut);
+      growInterval = growInterval * 2;
+     });
+
+     upgrade2Display.addEventListener("click", function(){
+       buttonGrower(upgrade2Display, globalGrowSize, globalTimeOut);
+       growInterval = growInterval + 5;
+    });
+
+    upgrade3Display.addEventListener("click", function(){
+      buttonGrower(upgrade3Display, globalGrowSize, globalTimeOut);
+      growInterval = growInterval + 20;
+    });
+
+    upgrade4Display.addEventListener("click", function(){
+      buttonGrower(upgrade4Display, globalGrowSize, globalTimeOut);
+      growInterval = growInterval * 3;
+    });
+
+    upgrade5Display.addEventListener("click", function(){
+      buttonGrower(upgrade5Display, globalGrowSize, globalTimeOut);
+      growInterval = growInterval * 5;
+    });
+
+    upgrade6Display.addEventListener("click", function(){
+      buttonGrower(upgrade6Display, globalGrowSize, globalTimeOut);
+      growInterval = growInterval + 100;
+    });
+
+    upgrade7Display.addEventListener("click", function(){
+      buttonGrower(upgrade7Display, globalGrowSize, globalTimeOut);
+      growInterval = growInterval * 12;
+    });
+
+    upgrade8Display.addEventListener("click", function(){
+      buttonGrower(upgrade8Display, globalGrowSize, globalTimeOut);
+      growInterval = growInterval + 500;
+    });
+
+    building1Display.addEventListener("click", function (){
+      buttonGrower(building1Display, globalGrowSize, globalTimeOut);
+    });
+
+    building2Display.addEventListener("click", function (){
+      buttonGrower(building2Display, globalGrowSize, globalTimeOut);
+    });
+
+    building3Display.addEventListener("click", function (){
+      buttonGrower(building3Display, globalGrowSize, globalTimeOut);
+    });
+
+    building4Display.addEventListener("click", function (){
+      buttonGrower(building4Display, globalGrowSize, globalTimeOut);
+    });
+
+    building5Display.addEventListener("click", function (){
+      buttonGrower(building5Display, globalGrowSize, globalTimeOut);
+    });
+
+    building6Display.addEventListener("click", function (){
+      buttonGrower(building6Display, globalGrowSize, globalTimeOut);
+    });
+
+    building7Display.addEventListener("click", function (){
+      buttonGrower(building7Display, globalGrowSize, globalTimeOut);
+    });
+
+
+  </script>
+
+</body>
+</html>
